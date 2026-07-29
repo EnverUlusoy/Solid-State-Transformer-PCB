@@ -2,7 +2,7 @@
 
 An interactive web page for viewing the PCB design of a digitally controlled, two-stage Solid-State Transformer (SST) prototype in 3D.
 
-🔗 **Live demo:** https://EnverUlusoy.github.io/pcb-portfolio/
+🔗 **Live demo:** https://EnverUlusoy.github.io/Solid-State-Transformer-PCB/
 
 ## About the Project
 
