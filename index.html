@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solid-State Transformer — PCB Portfolyo</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<style>
+  :root {
+    --navy: #0b1e3a;
+    --blue: #1e5fa8;
+    --light-blue: #eaf2fb;
+    --text: #1a1a1a;
+    --muted: #5a6472;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    color: var(--text);
+    background: #fff;
+  }
+  header {
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    color: #fff;
+    padding: 48px 24px 40px;
+    text-align: center;
+  }
+  header h1 { margin: 0 0 8px; font-size: 1.9rem; }
+  header p { margin: 0; opacity: 0.85; font-size: 1rem; max-width: 700px; margin: 0 auto; }
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  .viewer-wrap {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(11,30,58,0.15);
+    background: var(--light-blue);
+  }
+  model-viewer {
+    width: 100%;
+    height: 560px;
+    --poster-color: transparent;
+  }
+  .hint {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 36px 0;
+  }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--light-blue);
+    border-radius: 10px;
+    padding: 18px 16px;
+    text-align: center;
+  }
+  .stat-card .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--blue);
+  }
+  .stat-card .label {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  section h2 {
+    color: var(--navy);
+    border-bottom: 2px solid var(--light-blue);
+    padding-bottom: 8px;
+    margin-top: 40px;
+  }
+  section p, section li { color: #333; line-height: 1.65; }
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid #eee;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Digitally Controlled Solid-State Transformer</h1>
+  <p>Smart grid-oriented düşük gerilim DC dağıtım sistemleri için iki kademeli SST prototipi — PCB'nin 3D modelini aşağıda inceleyebilirsiniz.</p>
+</header>
+
+<main>
+  <div class="viewer-wrap">
+    <model-viewer
+      src="models/sst-pcb.glb"
+      alt="Solid-State Transformer PCB 3D model"
+      auto-rotate
+      auto-rotate-delay="1500"
+      rotation-per-second="18deg"
+      camera-controls
+      shadow-intensity="1"
+      exposure="1"
+      environment-image="neutral"
+      style="background-color:#eaf2fb;">
+    </model-viewer>
+  </div>
+  <p class="hint">Fare ile sürükleyerek döndürün, kaydırarak yakınlaştırın.</p>
+
+  <div class="stats">
+    <div class="stat-card"><div class="value">0.9954</div><div class="label">Power Factor</div></div>
+    <div class="stat-card"><div class="value">3.68%</div><div class="label">THD</div></div>
+    <div class="stat-card"><div class="value">~94%</div><div class="label">Verim</div></div>
+    <div class="stat-card"><div class="value">360V → 48V</div><div class="label">DC Link → Çıkış</div></div>
+  </div>
+
+  <section>
+    <h2>Proje Hakkında</h2>
+    <p>
+      Bu proje, 1 kW gücünde iki kademeli bir Solid-State Transformer (SST) prototipidir.
+      Sistem, bir boost PFC redresör ön katı ile izole edilmiş faz kaymalı tam köprü (PSFB)
+      DC/DC dönüştürücüden oluşur. Dijital kontrol, dört kademeli PI kontrol döngüsüyle
+      bir STM32 mikrodenetleyici üzerinde gerçekleştirilmiştir.
+    </p>
+    <p>
+      Çalışma, <strong>icSmartGrid 2026</strong> (14. Uluslararası Akıllı Şebeke Konferansı,
+      Suceava, Romanya) kapsamında sözlü sunum olarak kabul edilmiştir.
+    </p>
+  </section>
+
+  <section>
+    <h2>Teknik Detaylar</h2>
+    <ul>
+      <li>Giriş kademesi: Boost PFC redresör</li>
+      <li>İzolasyon kademesi: Faz kaymalı tam köprü (PSFB) DC/DC dönüştürücü</li>
+      <li>DC link gerilimi: 360V, çıkış gerilimi: 48V</li>
+      <li>Kontrol: STM32 tabanlı dijital kontrol, 4 kademeli PI döngüsü</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  Gazi Üniversitesi, Elektrik-Elektronik Mühendisliği — Bitirme Projesi
+</footer>
+
+</body>
+</html>
