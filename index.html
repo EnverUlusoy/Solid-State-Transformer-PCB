@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solid-State Transformer — PCB Portfolyo</title>
+<title>Solid-State Transformer — PCB Portfolio</title>
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <style>
   :root {
@@ -94,7 +94,7 @@
 
 <header>
   <h1>Digitally Controlled Solid-State Transformer</h1>
-  <p>Smart grid-oriented düşük gerilim DC dağıtım sistemleri için iki kademeli SST prototipi — PCB'nin 3D modelini aşağıda inceleyebilirsiniz.</p>
+  <p>A two-stage SST prototype for smart grid-oriented low-voltage DC distribution systems — explore the PCB's 3D model below.</p>
 </header>
 
 <main>
@@ -112,42 +112,42 @@
       style="background-color:#eaf2fb;">
     </model-viewer>
   </div>
-  <p class="hint">Fare ile sürükleyerek döndürün, kaydırarak yakınlaştırın.</p>
+  <p class="hint">Drag to rotate, scroll to zoom.</p>
 
   <div class="stats">
     <div class="stat-card"><div class="value">0.9954</div><div class="label">Power Factor</div></div>
     <div class="stat-card"><div class="value">3.68%</div><div class="label">THD</div></div>
-    <div class="stat-card"><div class="value">~94%</div><div class="label">Verim</div></div>
-    <div class="stat-card"><div class="value">360V → 48V</div><div class="label">DC Link → Çıkış</div></div>
+    <div class="stat-card"><div class="value">~94%</div><div class="label">Efficiency</div></div>
+    <div class="stat-card"><div class="value">360V → 48V</div><div class="label">DC Link → Output</div></div>
   </div>
 
   <section>
-    <h2>Proje Hakkında</h2>
+    <h2>About the Project</h2>
     <p>
-      Bu proje, 1 kW gücünde iki kademeli bir Solid-State Transformer (SST) prototipidir.
-      Sistem, bir boost PFC redresör ön katı ile izole edilmiş faz kaymalı tam köprü (PSFB)
-      DC/DC dönüştürücüden oluşur. Dijital kontrol, dört kademeli PI kontrol döngüsüyle
-      bir STM32 mikrodenetleyici üzerinde gerçekleştirilmiştir.
+      This project is a 1 kW two-stage Solid-State Transformer (SST) prototype.
+      The system consists of a boost PFC rectifier front end and an isolated
+      phase-shifted full-bridge (PSFB) DC/DC converter. Digital control is
+      implemented on an STM32 microcontroller using four cascaded PI control loops.
     </p>
     <p>
-      Çalışma, <strong>icSmartGrid 2026</strong> (14. Uluslararası Akıllı Şebeke Konferansı,
-      Suceava, Romanya) kapsamında sözlü sunum olarak kabul edilmiştir.
+      This work was accepted for oral presentation at <strong>icSmartGrid 2026</strong>
+      (14th International Conference on Smart Grid, Suceava, Romania).
     </p>
   </section>
 
   <section>
-    <h2>Teknik Detaylar</h2>
+    <h2>Technical Details</h2>
     <ul>
-      <li>Giriş kademesi: Boost PFC redresör</li>
-      <li>İzolasyon kademesi: Faz kaymalı tam köprü (PSFB) DC/DC dönüştürücü</li>
-      <li>DC link gerilimi: 360V, çıkış gerilimi: 48V</li>
-      <li>Kontrol: STM32 tabanlı dijital kontrol, 4 kademeli PI döngüsü</li>
+      <li>Input stage: Boost PFC rectifier</li>
+      <li>Isolation stage: Isolated phase-shifted full-bridge (PSFB) DC/DC converter</li>
+      <li>DC link voltage: 360V, output voltage: 48V</li>
+      <li>Control: STM32-based digital control, 4 cascaded PI loops</li>
     </ul>
   </section>
 </main>
 
 <footer>
-  Gazi Üniversitesi, Elektrik-Elektronik Mühendisliği — Bitirme Projesi
+  Gazi University, Electrical-Electronics Engineering — Senior Design Project
 </footer>
 
 </body>
